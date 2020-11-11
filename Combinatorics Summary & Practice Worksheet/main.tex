@@ -1,0 +1,103 @@
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{fdsymbol}
+\usepackage{enumitem}
+
+\title{Combinatorics Summary \& Practice Worksheet}
+\author{Ben Kettle}
+\date{22 January 2020}
+
+\begin{document}
+
+\maketitle
+
+\section{Combinatorics Review}
+Last week, we covered a variety of topics we can use for counting the \textbf{size} of \textbf{sets}. For more intuitive understanding of these topics (which you can use in case you forget the formulas!), look back at the slides from the last two sessions. \vspace{5mm}
+
+\noindent\begin{tabular}{p{.305\textwidth} p{.305\textwidth} p{.305\textwidth}}
+    \textbf{Sum Rule} \centering
+    
+    If $A_1,\ldots A_n$ are disjoint (no elements in common) then $|A_1 \cup \cdots \cup A_n| = |A_1| + \cdots + |A_n|$ &
+    
+    \textbf{Product Rule} \centering 
+    
+    If $P_1, \ldots, P_n$ are sets, then $|P_1 \times \cdots \times P_n = |P_1| \cdot \cdots \cdot |P_n|$ & 
+    
+    \textbf{Subsets} \centering
+    
+    For a set $S$ of size $n$, there are $2^n$ possible subsets, including $\varnothing$ and $S$ (each element must be in or out). & \\
+    
+    \textbf{Overcounting} \centering 
+    
+    Think about whether it's possible to represent one item in multiple ways with the system you choose---a common mistake is counting one item multiple times. &
+    
+    \textbf{Bijections} \centering
+    
+    A one-to-one mapping between the elements of two sets. If there is a bijection from $A$ to $B$, then $|A| = |B|$. &
+    
+    \textbf{Division Rule} \centering 
+    
+    If there is a $k$-to-$1$ mapping between $A$ and $B$, then $|B| = k\cdot |A|$. & \\
+    
+    \textbf{Permutations} \centering 
+    
+    A permutation is an ordering of all the items in a set. There are $n!$ permutations of an $n$-element set. & 
+    
+    \textbf{Combinations} \centering 
+    
+    A combination is any selection of items from a set where order does not matter. & 
+    
+    \textbf{Binomial Coefficient} \centering 
+    
+    The number of combinations of $k$ items from an $n$-element set: \[ \binom{n}{k} \]
+    
+\end{tabular} \vspace{2mm}
+
+\noindent For the following exercises, feel free to leave your answers in terms of factorials, binomial coefficients, multiplication, etc. 
+
+\newpage
+\section{Poker Exercises}
+In Poker, certain hands---collections of 5 cards---are rated based on their rarity. Poker is played with a 52-card deck, consisting of 4 \textbf{suits} (Clubs, Spades, Diamonds, and Hearts) of 13 \textbf{ranks}: Ace, 2, 3, 4, 5, 6, 7, 8, 9, 10, Jack, Queen, and King. To practice counting, we'll find out how many ways there are to achieve each hand. As you do these problems, think about mapping from hands to sequences---what are the defining characteristics of each hand that fits the description?
+
+\begin{enumerate}[itemsep=40mm,after=\vspace{50mm}]
+    \item How many total 5-card hands are possible from a 52-card deck?
+    
+    \item A four-of-a-kind is a set of four cards with the same rank. For example, $\{8\spadesuit, 8\diamondsuit, Q\heartsuit, 8\heartsuit, 8\clubsuit\}$ is one possible hand that contains a four-of-a-kind. How many possible four-of-a-kind hands are there?
+    
+    \item A Full House is a hand with three cards of one rank and two cards of another rank. How many possible Full Houses exist?
+    
+    \item A hand contains two pairs when it has two cards of one rank, two cards of a second rank, and another card of a third rank. How many of these hands exist?
+\end{enumerate}
+ 
+ \newpage
+ \section{Coin Flipping}
+ Next, we're going to talk about probability. To get a sense for how probability works, we'll have everyone flip a coin 20 times. Keep track of your results in the chart below, with a "T" for tails and an "H" for heads. Then, add up your number of tails and number of heads. \vspace{5mm}
+ 
+ \noindent \begin{center}\begin{tabular}{c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+    \textbf{trial} & 1 & 2 & 3 & 4& 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 & 16 & 17 & 18 & 19 & 20 \\ \hline
+    \textbf{result} &&&&&&&&&&&&&&&&&&&&&
+ \end{tabular} \vspace{5mm}
+ 
+ \begin{tabular}{c|c}
+     num. heads & num. tails \\ \hline
+      & 
+ \end{tabular}\end{center}
+ 
+\section{Let's Make a Deal: Don't do this yet!}
+Later on, we'll use this chart to keep track of more results: \vspace{5mm}
+
+\begin{tabular}{c||c|c|c|c|c}
+    trial & correct door & contestant picked & host revealed & stay/switch & contestant win? \\ \hline \hline
+    1 & & & & \\ \hline
+    2 & & & & \\ \hline
+    3 & & & & \\ \hline
+    4 & & & & \\ \hline
+    5 & & & & \\ \hline
+    6 & & & & \\ \hline
+    7 & & & & \\ \hline
+    8 & & & & \\ \hline
+    9 & & & & \\ \hline
+    10 & & & & \\ \hline
+\end{tabular}
+\end{document}
